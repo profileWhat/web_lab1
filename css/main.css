@@ -1,0 +1,88 @@
+.main-offer_radio {
+    padding-bottom: 5%;
+    margin-bottom: 4%;
+    color: red;
+    width: 5%;
+}
+
+.main-offer_text {
+    padding-bottom: 5%;
+    margin-bottom: 4%;
+    color: black;
+    width: 98%;
+    font-size: x-large;
+}
+
+.main-offer_button {
+    color: black;
+    font-size: x-large;
+    width: 19%;
+
+}
+.main-offer_button:active {
+    background-color: lightgreen;
+}
+.main-offer_submitExpression {
+    color: black;
+    font-size: x-large;
+    margin-bottom: 4%;
+}
+.header-my_name {
+    background-color: indianred;
+    height: 10vh;
+    font-size: x-large;
+}
+
+.header-my_name-section {
+    border: 4px outset royalblue;
+}
+
+.table-main {
+    vertical-align: top;
+    position: absolute;
+    width: 100%;
+    border: 9px outset darkred;
+    padding: 10px;
+}
+#main_table td {
+    padding: 15px;
+    vertical-align: top;
+}
+
+.table-main-section_input {
+    width: 40%;
+    border: 4px outset royalblue;
+    padding: 10px;
+}
+.input_label {
+    font-size: x-large;
+}
+.table-main-section_output {
+    width: 60%;
+    border: 4px outset royalblue;
+}
+
+#outputTable th {
+    background-color: deepskyblue;
+    color: black;
+    border: 2px outset deepskyblue;
+}
+#outputTable td {
+    color: black;
+    border: 2px double deepskyblue;
+}
+#outputTable *{
+    padding: 25px;
+    font-size:x-large;
+}
+#outputTable {
+    margin-left: 50px;
+    width: 90%;
+
+}
+
+.invalidData_label {
+    font-size: x-large;
+    color: red;
+}
+

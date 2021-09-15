@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторная работа</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="img/areas.png" type="image/x-icon">
+</head>
+<body>
+<table class = table-main id = main_table>
+
+    <tr class = header-my_name>
+        <th colspan=2 class = header-my_name-section>Романов Владимир Валерьевич 309616, группа P3233, Вариант 33014</th>
+    </tr>
+
+    <td class = table-main-section_input>
+        <img src = "img/areas.png" alt = picture>
+        <form>
+            <fieldset>
+                <legend class="input_label">Выберите X</legend>
+                <input class = main-offer_radio type = "radio" name = "xValue" id = xValue-3 value = -3 onchange="radioChanged(-3)">
+                <label for="xValue-3" class = input_label> -3</label>
+                <input class = main-offer_radio type = "radio" name = "xValue" id = xValue-2 value = -2 onchange="radioChanged(-2)">
+                <label for="xValue-2" class = input_label> -2</label>
+                <input class = main-offer_radio type = "radio" name = "xValue" id = xValue-1 value = -1 onchange="radioChanged(-1)">
+                <label for="xValue-1" class = input_label> -1</label>
+                <input class = main-offer_radio type = "radio" name = "xValue" id = xValue0 value = 0 onchange="radioChanged(0)">
+                <label for="xValue0" class = input_label> 0</label>
+                <input class = main-offer_radio type = "radio" name = "xValue" id = xValue1 value = 1 onchange="radioChanged(1)">
+                <label for="xValue1" class = input_label> 1</label>
+                <input class = main-offer_radio type = "radio" name = "xValue" id = xValue2 value = 2 onchange="radioChanged(2)">
+                <label for="xValue2" class = input_label> 2</label>
+                <input class = main-offer_radio type = "radio" name = "xValue" id = xValue3 value = 3 onchange="radioChanged(3)">
+                <label for="xValue3" class = input_label> 3</label>
+                <input class = main-offer_radio type = "radio" name = "xValue" id = xValue4 value = 4 onchange="radioChanged(4)">
+                <label for="xValue4" class = input_label> 4</label>
+                <input class = main-offer_radio type = "radio" name = "xValue" id = xValue5 value = 5 onchange="radioChanged(5)">
+                <label for="xValue5" class = input_label> 5</label>
+            </fieldset>
+            <br>
+            <p class="invalidData_label" id="messageX"></p>
+            <br>
+
+            <label for="yValue" class = input_label>Впишите Y, допустимые значения (-5..3)</label>
+            <input class = main-offer_text type = text name="yValue" id = yValue required>
+            <br>
+            <p class="invalidData_label" id="messageY"></p>
+            <br>
+
+            <fieldset>
+                <legend class = input_label>Выберите R</legend>
+                <input class="main-offer_button" type = button name="rValue" value="1" onclick="buttonClick(1)">
+                <input class="main-offer_button" type = button name="rValue" value="1.5" onclick="buttonClick(1.5)">
+                <input class="main-offer_button" type = button name="rValue" value="2" onclick="buttonClick(2)">
+                <input class="main-offer_button" type = button name="rValue" value="2.5" onclick="buttonClick(2.5)">
+                <input class="main-offer_button" type = button name="rValue" value="3" onclick="buttonClick(3)">
+            </fieldset>
+            <br>
+            <p class="invalidData_label" id="messageR"></p>
+            <br>
+
+            <input class =main-offer_submitExpression type = submit value = "Проверить" data-submit>
+            <br>
+
+            <input class = main-offer_submitExpression type = reset name = clearValues id = clearValues value = "Очистить" data-reset>
+            <br>
+
+        </form>
+    </td>
+
+    <td class = table-main-section_output>
+        <table id="outputTable">
+            <tbody id="outputTableBody">
+            <tr>
+                <th>X</th>
+                <th>Y</th>
+                <th>R</th>
+                <th>Результат</th>
+                <th>Время</th>
+            </tr>
+            </tbody>
+        </table>
+    </td>
+</table>
+<script src="js/jquery-3.5.1.js" type="text/javascript"></script>
+<script src="js/SubmitActions.js" type="text/javascript"></script>
+</body>
+</html>
