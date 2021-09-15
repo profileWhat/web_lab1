@@ -28,7 +28,7 @@ function isEmptyFields() {
 }
 
 function isValidData() {
-    if (y.value <= -5 || y.value >= 3) {
+    if (isNaN(y.value) || y.value <= -5 || y.value >= 3) {
         $('#messageY').text("Заполните поле допустимыми значениями");
         return false;
     }
