@@ -103,4 +103,17 @@ $(document).ready(function () {
             }
         });
     })
+});
+
+$(document).ready(function () {
+    $.ajax({
+        url: "php/restore.php",
+        async: true,
+        method: "POST",
+        success: function (response){
+            let outputTable = document.getElementById("outputTableBody");
+            outputTable.insertAdjacentHTML('beforeend', response);
+        }
+    })
 })
+
