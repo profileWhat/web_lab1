@@ -6,7 +6,7 @@ if (isset($_SESSION['results'])) {
             <td><?php echo $result[0] ?></td>
             <td><?php echo $result[1] ?></td>
             <td><?php echo $result[2] ?></td>
-            <td class="<?php echo $result[3] ?>"><?php echo $result[3] ?></td>
+            <td><?php echo $result[3] ?></td>
             <td><?php echo $result[4] ?></td>
         </tr>
     <?php }} ?>

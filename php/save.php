@@ -9,16 +9,26 @@ $current_time = date("H:i:s");
 $message = "";
 $class = "No";
 
-if (($x > 0 && $y >= 0 && $x + $y <= $r/2) ||
-    ($x <= 0 && $y >= 0 && abs($x) <= $r && abs($y) <= $r) ||
-    ($x < 0 && $y < 0 && $x*$x + $y*$y <= $r*$r)) {
-    $message = "Yes";
-    $class = "Yes";
-} else {
-    $message = "No";
-}
+
 
 if (!is_null($r) && !is_null($x) && !is_null($y)) {
+    $isValidData = true;
+    if ($r == 0 && $y == 0) $isValidData = false;
+    if ($x < -3 || $x > 5) $isValidData = false;
+    if ($y <= -5 || $y >= 3) $isValidData = false;
+    if (!in_array($r, array(1, 1.5, 2, 2.5, 3))) $isValidData = false;
+    if ($isValidData) {
+        if (($x > 0 && $y >= 0 && $x + $y <= $r/2) ||
+            ($x <= 0 && $y >= 0 && abs($x) <= $r && abs($y) <= $r) ||
+            ($x < 0 && $y < 0 && $x*$x + $y*$y <= $r*$r)) {
+            $message = "Yes";
+            $class = "Yes";
+        } else {
+            $message = "No";
+        }
+    } else {
+        $message = "is not valid data";
+    }
     $result = array($x, $y, $r, $message, $current_time);
     if (!isset($_SESSION['results'])) {
         $_SESSION['results'] = array();
