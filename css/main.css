@@ -30,7 +30,7 @@
 .header-my_name {
     background-color: indianred;
     height: 10vh;
-    font-size: x-large;
+    font: x-large Helvetica, sans-serif;
 }
 
 .header-my_name-section {
